@@ -18,10 +18,8 @@ try:
     hdline_article_list = main.find("ul", {"class": "hdline_article_list"}).findAll("li")
 
     for hdline in hdline_article_list:
-        # hdline_news_list.append(hdline.find("a").text.strip())
         print(hdline.find("a").text.strip())
 
-    # print("Today`s headline : " , hdline_news_list)
 except urllib.error.HTTPError as e:
     print(e.code)
 except urllib.error.URLError as e:
