@@ -13,8 +13,6 @@ try:
     html = urllib.request.urlopen(req)
     main = bs4.BeautifulSoup(html, "html.parser")
     
-    hdline_news_list = [];
-
     hdline_article_list = main.find("ul", {"class": "hdline_article_list"}).findAll("li")
 
     for hdline in hdline_article_list:
